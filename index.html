@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vibe Bistrot · Oran</title>
+  <meta name="description" content="Vibe Bistrot, Oran — brunch, food & coffee. Des saveurs authentiques et créatives dans un cadre moderne et cosy." />
+  <meta name="theme-color" content="#123128" />
+  <link rel="icon" href="assets/logo.png" />
+  <meta property="og:title" content="Vibe Bistrot · Oran" />
+  <meta property="og:image" content="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loader" aria-hidden="true">
+    <img src="assets/logo-transparent.png" alt="" />
+    <div class="loader-bar"><span></span></div>
+  </div>
+
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a href="#top" class="nav-logo"><img src="assets/logo-transparent.png" alt="Vibe Bistrot" /></a>
+    <nav class="nav-links">
+      <a href="#experience">L'expérience</a>
+      <a href="#menu">La carte</a>
+      <a href="#visite">Nous trouver</a>
+    </nav>
+    <a href="#visite" class="btn btn-small">Réserver</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow reveal">Brunch · Food · Coffee — Oran</p>
+      <h1 class="hero-title">
+        <span class="line"><span>Saveurs</span></span>
+        <span class="line"><span><em>authentiques</em></span></span>
+        <span class="line"><span>&amp; créatives</span></span>
+      </h1>
+      <p class="hero-sub reveal">Un bistrot moderne et cosy où chaque assiette a sa propre vibe.</p>
+      <div class="hero-cta reveal">
+        <a href="#menu" class="btn">Découvrir la carte</a>
+        <a id="maps-link" href="#" target="_blank" rel="noopener" class="btn btn-ghost">Itinéraire</a>
+      </div>
+      <div class="scroll-hint"><span></span>Défiler</div>
+    </section>
+
+    <section id="experience" class="experience">
+      <div class="section-head reveal">
+        <p class="eyebrow">L'expérience</p>
+        <h2>Feel the <em>vibe</em></h2>
+      </div>
+      <div class="cards">
+        <article class="card tilt reveal">
+          <div class="card-num">01</div>
+          <h3>Brunch</h3>
+          <p>Des matinées généreuses, servies toute la journée : œufs, pancakes, avocado toast et jus pressés.</p>
+        </article>
+        <article class="card tilt reveal">
+          <div class="card-num">02</div>
+          <h3>Cuisine</h3>
+          <p>Burgers signature, pâtes et grillades — des produits frais travaillés avec créativité.</p>
+        </article>
+        <article class="card tilt reveal">
+          <div class="card-num">03</div>
+          <h3>Coffee &amp; Mocktails</h3>
+          <p>Cafés de spécialité et mocktails maison, pour une pause qui a du goût.</p>
+        </article>
+      </div>
+      <div class="stats reveal">
+        <div><strong>7/7</strong><span>Ouvert tous les jours</span></div>
+        <div><strong>11h–23h</strong><span>Service continu</span></div>
+        <div><strong>100%</strong><span>Fait maison</span></div>
+      </div>
+    </section>
+
+    <section id="menu" class="menu">
+      <div class="section-head reveal">
+        <p class="eyebrow">La carte</p>
+        <h2>Notre <em>menu</em></h2>
+      </div>
+      <div class="menu-tabs" role="tablist" id="menu-tabs"></div>
+      <div class="menu-panel" id="menu-panel" role="tabpanel"></div>
+    </section>
+
+    <section id="visite" class="visit">
+      <div class="visit-info reveal">
+        <p class="eyebrow">Nous trouver</p>
+        <h2>Passez nous <em>voir</em></h2>
+        <ul class="visit-list">
+          <li><span>Adresse</span><strong id="info-address"></strong></li>
+          <li><span>Horaires</span><strong id="info-hours"></strong></li>
+        </ul>
+        <div class="hero-cta">
+          <a id="maps-link-2" href="#" target="_blank" rel="noopener" class="btn">Ouvrir dans Google Maps</a>
+          <a id="ig-link" href="#" target="_blank" rel="noopener" class="btn btn-ghost">Instagram</a>
+        </div>
+      </div>
+      <div class="visit-map tilt reveal">
+        <iframe id="map-frame" title="Carte Vibe Bistrot" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/logo-transparent.png" alt="Vibe Bistrot" />
+    <p>© <span id="year"></span> Vibe Bistrot · Oran</p>
+  </footer>
+
+  <script type="importmap">
+    { "imports": {
+      "three": "./vendor/three.module.min.js"
+    } }
+  </script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
