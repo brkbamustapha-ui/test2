@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { RoomEnvironment } from "./vendor/RoomEnvironment.js";
+import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 import { INFO, MENU } from "./menu.js";
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
